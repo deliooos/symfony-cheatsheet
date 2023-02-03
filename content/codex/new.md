@@ -11,7 +11,7 @@ displayName: 'new'
 Initialise un projet Symfony à l'intérieur d'un dossier
 
 Commande complète
-```
+```shell
 symfony new nom_du_projet --version="6.2.*" --webapp
 ```
 

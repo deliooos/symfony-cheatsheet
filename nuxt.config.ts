@@ -7,7 +7,9 @@ export default defineNuxtConfig({
         'nuxt-icon'
     ],
     content: {
-
+        highlight: {
+            theme: 'github-light'
+        }
     },
     colorMode: {
         preference: 'system',

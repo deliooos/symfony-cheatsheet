@@ -1,7 +1,5 @@
 <script setup lang="ts">
-  const { data } = await useAsyncData('codex', () => queryContent('/codex').limit(10).find())
-
-  console.log(data)
+  const { data } = await useAsyncData('codex', () => queryContent('/codex').limit(6).find())
 </script>
 
 <template>
@@ -11,7 +9,7 @@
       <NuxtLink to="/codex" class="btn btn-secondary">Tout voir</NuxtLink>
     </div>
     <div class="flex gap-10 overflow-x-auto">
-      <div v-for="element in data" class="card shrink-0 w-96 bg-neutral text-neutral-content shadow-xl">
+      <div v-for="element in data" class="card shrink-0 w-96 bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title">{{ element.displayName }}</h2>
           <p>{{ element.description }}</p>
@@ -24,6 +22,6 @@
   </div>
 </template>
 
-<style scoped>
+  <style scoped>
 
 </style>

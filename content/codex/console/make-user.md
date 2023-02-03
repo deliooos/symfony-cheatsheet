@@ -12,7 +12,7 @@ displayName: 'make:user'
 Créé un système d'utilisateur dans votre application Symfony afin de sécuriser ~~des parties~~ de votre application, gérer la connexion et l'inscription ou encore instaurer un système de rôle.
 
 Commande complète
-```
+```shell
 symfony console make:user
 ```
 

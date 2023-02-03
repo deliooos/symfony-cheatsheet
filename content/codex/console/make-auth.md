@@ -12,7 +12,7 @@ displayName: 'make:auth'
 Créé un système d'authentification
 
 Commande complète
-```
+```shell
 symfony console make:auth
 ```
 
@@ -28,4 +28,4 @@ Dans la prochaine étape il vous demande un nom pour votre _controller_, qui con
 
 Etape suivante, il vous demande si vous voulez générer une URL de déconnexion, encore une fois vous pourrez le rajouter plus tard mais je vous conseille fortement d'accepter.
 
-Et voilà ! Vous avez un formulaire de connexion disponible sur la route `/login`.
+Et voilà ! Vous avez un formulaire de connexion disponible sur la route `/login` et son URL de déconnexion sur la route `/logout`.

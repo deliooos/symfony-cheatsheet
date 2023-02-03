@@ -12,7 +12,7 @@ displayName: 'make:registration-form'
 Créé un système d'inscription
 
 Commande complète
-```
+```shell
 symfony console make:registration-form
 ```
 
