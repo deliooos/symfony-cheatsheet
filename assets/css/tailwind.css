@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.alert a,
+.alert code {
+    @apply text-white
+}
+
 @layer components {
     .classic-main {
         @apply min-h-screen w-[950px] mx-auto mt-10
