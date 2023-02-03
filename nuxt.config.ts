@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     ],
     content: {
         highlight: {
-            theme: 'github-light'
+            theme: 'github-dark'
         }
     },
     colorMode: {
