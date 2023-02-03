@@ -9,6 +9,6 @@
 
 @layer components {
     .classic-main {
-        @apply min-h-screen w-[950px] mx-auto mt-10
+        @apply min-h-screen lg:w-[950px] mx-auto mt-10
     }
 }

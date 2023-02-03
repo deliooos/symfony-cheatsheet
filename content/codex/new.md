@@ -1,6 +1,7 @@
 ---
 title: 'new - SF Cheatsheet'
 description: 'Initialise un projet Symfony'
+displayName: 'new'
 ---
 
 # symfony new

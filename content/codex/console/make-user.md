@@ -1,6 +1,7 @@
 ---
 title: 'make:user - SF Cheatsheet'
-description: 'Créé un système dutilisateurs'
+description: "Créé un système d'utilisateurs"
+displayName: 'make:user'
 ---
 
 # symfony console make:user
