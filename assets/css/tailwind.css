@@ -12,3 +12,15 @@
         @apply min-h-screen lg:w-[950px] mx-auto mt-10
     }
 }
+
+@layer utilities {
+    .horizontal-scrollbar::-webkit-scrollbar-track {
+        @apply shadow-inner rounded bg-white
+    }
+    .horizontal-scrollbar::-webkit-scrollbar {
+        @apply h-3
+    }
+    .horizontal-scrollbar::-webkit-scrollbar-thumb {
+        @apply rounded shadow-inner bg-primary
+    }
+}
