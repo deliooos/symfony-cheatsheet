@@ -4,7 +4,7 @@ description: 'Créé un fichier de migration contenant le schéma avant/après d
 displayName: 'make:migration'
 ---
 
-# symfony console make:entity
+# symfony console make:migration
 #### **Documentation de cet article**
 - [Doctrine (en)](https://symfony.com/doc/current/doctrine.html)
 - [Maker Bundle (en)](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html)
