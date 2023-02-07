@@ -27,7 +27,7 @@
         <h2 class="card-title">Codex</h2>
         <p>Trouvez des descriptions rapides, concises et compréhensible des fonctions et commandes de Symfony</p>
         <div class="card-actions justify-end">
-          <NuxtLink class="btn btn-primary">Explorer</NuxtLink>
+          <NuxtLink to="/codex" class="btn btn-primary">Explorer</NuxtLink>
         </div>
       </div>
     </div>

@@ -16,6 +16,10 @@
     "nuxt-icon": "^0.2.10"
   },
   "dependencies": {
-    "daisyui": "^2.50.0"
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/integrations": "^9.12.0",
+    "@vueuse/nuxt": "^9.12.0",
+    "daisyui": "^2.50.0",
+    "fuse.js": "^6.6.2"
   }
 }
