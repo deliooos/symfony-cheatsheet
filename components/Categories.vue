@@ -18,7 +18,7 @@
         <h2 class="card-title">Astuces</h2>
         <p>Vous ne saviez pas qu'on pouvais faire ça avec Symfony ? Maintenant vous savez !</p>
         <div class="card-actions justify-end">
-          <NuxtLink class="btn btn-primary">Découvrir</NuxtLink>
+          <NuxtLink to="/astuces" class="btn btn-primary">Découvrir</NuxtLink>
         </div>
       </div>
     </div>

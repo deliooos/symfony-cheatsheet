@@ -1,13 +1,34 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 const themes = [
-    'system',
-    'light',
-    'dark',
-    'cyberpunk',
-    'halloween',
-    'night',
-    'winter'
+  {
+    title: 'Système',
+    value: 'system'
+  },
+  {
+    title: 'Clair',
+    value: 'light'
+  },
+  {
+    title: 'Sombre',
+    value: 'dark'
+  },
+  {
+    title: 'Cyberpunk',
+    value: 'cyberpunk'
+  },
+  {
+    title: 'Halloween',
+    value: 'halloween'
+  },
+  {
+    title: 'Nuit',
+    value: 'night'
+  },
+  {
+    title: 'Hiver',
+    value: 'winter'
+  }
 ]
 </script>
 
@@ -23,7 +44,7 @@ const themes = [
       <div class="dropdown dropdown-end">
         <select v-model="colorMode.preference" class="select select-accent w-full max-w-xs">
           <option disabled selected>Thème</option>
-          <option v-for="theme of themes" :key="theme">{{ theme }}</option>
+          <option v-for="theme of themes" :value="theme.value" :key="theme">{{ theme.title }}</option>
         </select>
       </div>
     </div>
