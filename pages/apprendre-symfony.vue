@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+useHead({
+  title: 'Apprendre Symfony'
+})
 </script>
 
 <template>

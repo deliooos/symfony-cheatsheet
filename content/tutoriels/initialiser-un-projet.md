@@ -2,6 +2,7 @@
 title: 'Créer une app - SF Cheatsheet'
 description: 'Initialisez un projet Symfony automatiquement avec le binaire Symfony'
 displayName: 'Initialiser un projet'
+tags: ["initialiser", "creer", "projet", "application", "app"]
 ---
 
 # Initialiser un projet Symfony

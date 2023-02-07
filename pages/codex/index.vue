@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import { useFuse, UseFuseOptions } from '@vueuse/integrations/useFuse'
 
+useHead({
+  title: 'Codex - SFCS',
+})
+
 const { data } = await useAsyncData('codex', () => queryContent('/codex').find())
 
 interface CodexItem {
   displayName: string
   description: string
+  tags: string[]
 }
 
 const dataFetched = ref<CodexItem[]>(data)
@@ -14,7 +19,7 @@ const search = ref('')
 
 const options = computed<UseFuseOptions<CodexItem>>(() => ({
   fuseOptions: {
-    keys: ['displayName', 'description'],
+    keys: ['displayName', 'description', 'tags'],
     isCaseSensitive: false,
     threshold: 0.3,
   },
@@ -23,8 +28,6 @@ const options = computed<UseFuseOptions<CodexItem>>(() => ({
 }))
 
 const { results } = useFuse(search, dataFetched, options)
-
-console.log(results)
 </script>
 
 <template>
@@ -41,7 +44,7 @@ console.log(results)
         </button>
       </div>
     </form>
-    <div class="grid grid-cols-2 place-items-center space-y-10">
+    <div class="grid grid-cols-2 place-items-center items-end space-y-10">
       <div v-for="result in results" class="card w-96 bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title">{{ result.item.displayName }}</h2>

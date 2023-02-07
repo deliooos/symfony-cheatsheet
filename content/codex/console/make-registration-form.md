@@ -2,6 +2,7 @@
 title: 'make:registration-form - SF Cheatsheet'
 description: "Créé un formulaire d'inscription"
 displayName: 'make:registration-form'
+tags: ["inscription", "register", "formulaire"]
 ---
 
 # symfony console make:registration-form

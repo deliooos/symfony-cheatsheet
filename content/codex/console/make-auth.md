@@ -2,6 +2,7 @@
 title: 'make:auth - SF Cheatsheet'
 description: 'Créé un authenticator avec ou sans formulaire de connexion'
 displayName: 'make:auth'
+tags: ["authentification", "auth", "security", "login", "connexion"]
 ---
 
 # symfony console make:auth

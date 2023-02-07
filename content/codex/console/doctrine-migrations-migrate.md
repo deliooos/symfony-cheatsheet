@@ -2,6 +2,7 @@
 title: 'doctrine:migrations:migrate - SF Cheatsheet'
 description: 'Lit le dossier des migrations et exécute les migrations nécessaires'
 displayName: 'doctrine:migrations:migrate'
+tags: ["migration", "migrate", "base de donnée", "doctrine", "db", "bdd"]
 ---
 
 # symfony console doctrine:migrations:migrate

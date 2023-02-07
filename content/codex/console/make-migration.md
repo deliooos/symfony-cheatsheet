@@ -2,6 +2,7 @@
 title: 'make:migration - SF Cheatsheet'
 description: 'Créé un fichier de migration contenant le schéma avant/après de la base de donnée'
 displayName: 'make:migration'
+tags: ["migration", "base de donnée", "doctrine", "db", "bdd"]
 ---
 
 # symfony console make:migration

@@ -2,6 +2,7 @@
 title: 'make:entity - SF Cheatsheet'
 description: 'Créé une entité Symfony, représentant une table de base de donnée'
 displayName: 'make:entity'
+tags: ["migration", "base de donnée", "doctrine", "db", "bdd", "entite"]
 ---
 
 # symfony console make:entity
