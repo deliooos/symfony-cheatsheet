@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         '@nuxt/content',
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
-        'nuxt-icon'
+        'nuxt-icon',
+        '@nuxt/image-edge'
     ],
     content: {
         highlight: {

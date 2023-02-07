@@ -25,12 +25,13 @@ useHead({
       <div class="hero-content max-w-none text-center">
         <div>
           <h1 class="text-5xl font-bold">Bienvenue sur la SFCS</h1>
-          <p class="py-6 text-xl">Retrouvez sur la <span class="font-semibold text-primary">Symfony Cheatsheet</span> des astuces, solutions et un codex pour débutant des commandes et fonctions de base de <NuxtLink to="https://symfony.com/" class="link">Symfony</NuxtLink></p>
+          <p class="py-6 text-xl">Retrouvez sur la <span class="font-semibold text-primary">Symfony Cheatsheet</span> des astuces, solutions et un codex pour débutant des commandes et fonctions de base de <NuxtLink to="https://symfony.com/" target="_blank" class="link">Symfony</NuxtLink></p>
           <NuxtLink to="/apprendre-symfony" class="btn btn-primary">Apprendre Symfony</NuxtLink>
         </div>
       </div>
     </div>
     <Categories/>
+    <HomeTutoriels/>
     <HomeCodex/>
   </main>
 
