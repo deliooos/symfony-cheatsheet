@@ -83,7 +83,7 @@ onMounted(() => {
 
 <template>
   <div class="form-control">
-    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Recherche à venir..." class="search-value input input-bordered"/>
+    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Rechercher..." class="search-value input input-bordered"/>
   </div>
   <Teleport to="body">
     <div v-if="showSearch" class="flex items-center justify-center fixed inset-0 overflow-y-scroll bg-neutral/70 backdrop-blur z-40">
