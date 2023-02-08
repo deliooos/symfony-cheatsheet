@@ -11,7 +11,7 @@
           <Tip type="alert-info" class="py-5 text-left mb-5">
             La plupart, si ce n'est la totalité du contenu de SFCS contenant des commandes utilise le <NuxtLink to="https://symfony.com/download" target="_blank" class="link">binaire Symfony</NuxtLink>, il est donc fortement conseillé de l'avoir installé sur votre machine pour pouvoir suivre les tutoriels.
           </Tip>
-          <div class="flex justify-center gap-5">
+          <div class="flex flex-col sm:flex-row justify-center gap-5">
             <NuxtLink to="/apprendre-symfony" class="btn btn-primary">Apprendre Symfony</NuxtLink>
             <NuxtLink to="/apprendre-symfony" class="btn btn-primary inline-flex gap-2" disabled>Contribuer <span class="badge badge-ghost normal-case">Bientôt disponible</span></NuxtLink>
           </div>
