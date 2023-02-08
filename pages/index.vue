@@ -13,7 +13,7 @@
           </Tip>
           <div class="flex flex-col sm:flex-row justify-center gap-5">
             <NuxtLink to="/apprendre-symfony" class="btn btn-primary">Apprendre Symfony</NuxtLink>
-            <NuxtLink to="/apprendre-symfony" class="btn btn-primary inline-flex gap-2" disabled>Contribuer <span class="badge badge-ghost normal-case">Bientôt disponible</span></NuxtLink>
+            <NuxtLink to="/apprendre-symfony" class="btn btn-primary inline-flex gap-2 bg-neutral-focus" disabled>Contribuer <span class="badge badge-ghost normal-case">Bientôt disponible</span></NuxtLink>
           </div>
         </div>
       </div>

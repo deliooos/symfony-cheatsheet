@@ -1,17 +1,12 @@
 <script setup lang="ts">
 import { useFuse, UseFuseOptions } from '@vueuse/integrations/useFuse'
+import { CodexItem} from "~/utils/interfaces";
 
 useHead({
   title: 'Codex - SFCS',
 })
 
 const { data } = await useAsyncData('codex', () => queryContent('/codex').find())
-
-interface CodexItem {
-  displayName: string
-  description: string
-  tags: string[]
-}
 
 const dataFetched = ref<CodexItem[]>(data)
 

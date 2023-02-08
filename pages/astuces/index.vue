@@ -1,17 +1,12 @@
 <script setup lang="ts">
 import { useFuse, UseFuseOptions } from '@vueuse/integrations/useFuse'
+import { AstuceItem } from "~/utils/interfaces";
 
 useHead({
   title: 'Astuces - SFCS',
 })
 
 const { data } = await useAsyncData('astuces', () => queryContent('/astuces').find())
-
-interface AstuceItem {
-  displayName: string
-  description: string
-  tags: string[]
-}
 
 const dataFetched = ref<AstuceItem[]>(data)
 

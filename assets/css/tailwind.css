@@ -7,6 +7,10 @@
     @apply text-white
 }
 
+.card-body > p {
+    @apply line-clamp-2
+}
+
 @layer components {
     .classic-main {
         @apply min-h-screen lg:w-[950px] mx-auto mt-10 p-5 lg:p-0

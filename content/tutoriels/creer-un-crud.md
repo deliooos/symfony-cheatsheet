@@ -1,11 +1,11 @@
 ---
 title: 'Créer un CRUD - SF Cheatsheet'
 description: "Créer automatiquement un CRUD (create, read, update, delete) avec Symfony à partir d'une entité"
-displayName: 'Créer une CRUD'
+displayName: 'Créer un CRUD'
 tags: ["crud", "create", "delete", "read", "update", "console", "formulaire"]
 ---
 
-# symfony console make:crud
+# Créer un CRUD
 #### **Documentation de cet article**
 - [Maker Bundle (en)](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html)
 - [make:crud](/codex/console/make-crud)

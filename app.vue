@@ -28,7 +28,6 @@ useHead({
 </script>
 
 <template>
-  <Search/>
   <Header/>
   <NuxtPage/>
 </template>

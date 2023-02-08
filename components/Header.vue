@@ -38,9 +38,10 @@ const themes = [
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">SFCS</NuxtLink>
     </div>
     <div class="flex-none gap-2 hidden lg:flex">
-      <div class="form-control">
+<!--      <div class="form-control">
         <input type="text" placeholder="Recherche à venir..." class="input input-bordered" disabled/>
-      </div>
+      </div>-->
+      <Search />
       <div class="dropdown dropdown-end hidden lg:flex">
         <select v-model="colorMode.preference" class="select select-accent w-full max-w-xs">
           <option disabled selected>Thème</option>
@@ -54,9 +55,6 @@ const themes = [
         <li><NuxtLink to="/tutoriels">Tutoriels</NuxtLink></li>
         <li><NuxtLink to="/astuces">Astuces</NuxtLink></li>
         <li><NuxtLink to="/codex">Codex</NuxtLink></li>
-        <div class="form-control">
-          <input type="text" placeholder="Recherche à venir..." class="input input-bordered" disabled/>
-        </div>
         <select v-model="colorMode.preference" class="select select-accent w-full max-w-xs">
           <option disabled selected>Thème</option>
           <option v-for="theme of themes" :value="theme.value" :key="theme">{{ theme.title }}</option>
