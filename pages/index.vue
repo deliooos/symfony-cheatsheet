@@ -20,6 +20,7 @@
     </div>
     <Categories/>
     <HomeTutoriels/>
+    <HomeAstuces/>
     <HomeCodex/>
   </main>
 
