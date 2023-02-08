@@ -20,11 +20,15 @@ useHead({
       type: "image/x-icon",
       href: "/favicon.ico"
     }
-  ]
+  ],
+  bodyAttrs: {
+    class: "relative"
+  }
 })
 </script>
 
 <template>
+  <Search/>
   <Header/>
   <NuxtPage/>
 </template>

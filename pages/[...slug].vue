@@ -15,7 +15,7 @@
     if (content) {
       const stats = readingTime(content.innerHTML)
       const time = Math.round(stats.minutes)
-      readTime.value = time > 1 ? `Environ ${time} minutes` : `Environ ${stats.time} secondes`
+      readTime.value = time >= 1 ? `Environ ${time} minutes` : `Environ ${Math.round(stats.time / 1000)} secondes`
     }
   })
 </script>
@@ -34,7 +34,7 @@
         </template>
       </ContentDoc>
     </div>
-    <div class="hidden md:block w-1/5">
+    <div v-if="article" class="hidden md:block w-1/5">
       <div class="sticky top-6 flex flex-col gap-4">
         <h5 class="-mb-1 font-semibold text-xl">À propos</h5>
         <ul class="space-y-1">

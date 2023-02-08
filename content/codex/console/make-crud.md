@@ -2,7 +2,7 @@
 title: 'make:crud - SF Cheatsheet'
 description: "Créer automatiquement un CRUD (create, read, update, delete) avec Symfony à partir d'une entité"
 displayName: 'make:crud'
-tags: ["crud", "create", "delete", "read", "update", "console"]
+tags: ["crud", "create", "delete", "read", "update", "console", "formulaire"]
 ---
 
 # symfony console make:crud
