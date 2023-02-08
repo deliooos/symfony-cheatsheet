@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="space-y-8 mb-16">
+  <div class="space-y-8">
     <div class="flex items-center gap-5">
       <h2 class="text-2xl font-semibold">Les derniers tutoriels</h2>
       <NuxtLink to="/tutoriels" class="btn btn-secondary">Tout voir</NuxtLink>

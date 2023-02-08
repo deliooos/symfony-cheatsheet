@@ -20,7 +20,9 @@
     </div>
     <Categories/>
     <HomeTutoriels/>
+    <div class="divider"></div>
     <HomeAstuces/>
+    <div class="divider"></div>
     <HomeCodex/>
   </main>
 

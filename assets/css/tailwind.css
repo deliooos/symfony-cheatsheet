@@ -15,7 +15,7 @@
 
 @layer utilities {
     .horizontal-scrollbar::-webkit-scrollbar-track {
-        @apply shadow-inner rounded bg-white
+        @apply shadow-inner rounded bg-neutral
     }
     .horizontal-scrollbar::-webkit-scrollbar {
         @apply h-3
