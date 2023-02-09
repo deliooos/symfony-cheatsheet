@@ -6,7 +6,7 @@ const { data } = await useAsyncData('astuces', () => queryContent('/astuces').li
   <div class="space-y-8">
     <div class="flex items-center gap-5">
       <h2 class="text-2xl font-semibold">Les dernières astuces</h2>
-      <NuxtLink to="/codex" class="btn btn-secondary">Tout voir</NuxtLink>
+      <NuxtLink to="/astuces" class="btn btn-secondary">Tout voir</NuxtLink>
     </div>
     <div class="flex gap-10 pb-5 overflow-x-auto horizontal-scrollbar">
       <div v-for="element in data" class="card shrink-0 w-96 bg-base-100 shadow-xl">

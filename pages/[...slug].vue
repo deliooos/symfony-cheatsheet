@@ -1,28 +1,38 @@
 <script setup lang="ts">
-  // @ts-ignore
-  import readingTime from "reading-time/lib/reading-time";
+// @ts-ignore
+import readingTime from "reading-time/lib/reading-time";
+import { useScroll } from "@vueuse/core";
 
-  const route = useRoute()
-  const article = await queryContent(route.path).findOne()
+const route = useRoute()
+const article = await queryContent(route.path).findOne()
 
-  let readTime = ref('')
-  let headers = ref<Array<HTMLHeadingElement>>([])
+let readTime = ref('')
+let headers = ref<Array<HTMLHeadingElement>>([])
+const windowElement = ref()
+const { y } = useScroll(windowElement, { behavior : 'smooth'})
+const showGoToTop = ref(false)
 
-  onMounted(() => {
-    const content = document.querySelector('.prose')
-    headers.value = Array.from(document.querySelectorAll('h2'))
+watch(y , (value) => {
+  showGoToTop.value = value > 350;
+})
 
-    if (content) {
-      const stats = readingTime(content.innerHTML)
-      const time = Math.round(stats.minutes)
-      readTime.value = time >= 1 ? `Environ ${time} minutes` : `Environ ${Math.round(stats.time / 1000)} secondes`
-    }
-  })
+onMounted(() => {
+  const content = document.querySelector('.prose')
+  windowElement.value = window
+
+  headers.value = Array.from(document.querySelectorAll('h2'))
+
+  if (content) {
+    const stats = readingTime(content.innerHTML)
+    const time = Math.round(stats.minutes)
+    readTime.value = time >= 1 ? `Environ ${time} minutes` : `Environ ${Math.round(stats.time / 1000)} secondes`
+  }
+})
 </script>
 
 <template>
   <main class="classic-main flex gap-10">
-    <div class="prose max-w-none md:w-4/5">
+    <div class="prose prose-pre:overflow-x-scroll max-w-none md:w-4/5">
       <ContentDoc>
         <template #not-found>
           <main class="classic-main flex flex-col items-center">
@@ -54,6 +64,13 @@
           </ul>
         </div>
       </div>
+      <Teleport to="body">
+        <div v-if="showGoToTop" @click="y = 0" class="fixed bottom-10 right-10 md:right-20 z-50">
+          <div class="btn">
+            <Icon name="ph:arrow-up" size="2rem" class="cursor-pointer" />
+          </div>
+        </div>
+      </Teleport>
     </div>
   </main>
 </template>

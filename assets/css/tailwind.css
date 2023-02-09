@@ -11,6 +11,10 @@
     @apply line-clamp-2
 }
 
+.line {
+    @apply overflow-x-hidden
+}
+
 @layer components {
     .classic-main {
         @apply min-h-screen lg:w-[950px] mx-auto mt-10 p-5 lg:p-0

@@ -6,7 +6,7 @@
     <div class="hero my-56">
       <div class="hero-content max-w-none text-center">
         <div>
-          <h1 class="inline-flex items-center gap-2 text-5xl font-bold">Bienvenue sur la SFCS <span class="badge badge-info uppercase">Bêta</span> </h1>
+          <h1 class="inline-flex flex-col lg:flex-row items-center gap-2 text-5xl font-bold">Bienvenue sur la SFCS <span class="badge badge-info uppercase">Bêta</span> </h1>
           <p class="py-6 text-xl">Retrouvez sur la <span class="font-semibold text-primary">Symfony Cheatsheet</span> des astuces, solutions et un codex pour débutant des commandes et fonctions de base de <NuxtLink to="https://symfony.com/" target="_blank" class="link">Symfony</NuxtLink></p>
           <Search/>
           <Tip type="alert-info" class="py-5 text-left my-5">

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 useHead({
   title: 'SFCS',
   meta: [
@@ -30,4 +31,5 @@ useHead({
 <template>
   <Header/>
   <NuxtPage/>
+  <Footer/>
 </template>

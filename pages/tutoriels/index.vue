@@ -40,7 +40,7 @@ const { results } = useFuse(search, dataFetched, options)
       </button>
     </div>
   </form>
-  <div class="grid grid-cols-2 place-items-center items-end space-y-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 place-items-center items-end space-y-10">
     <div v-for="result in results" class="card w-96 bg-base-100 shadow-xl">
       <div class="card-body">
         <h2 class="card-title">{{ result.item.displayName }}</h2>
