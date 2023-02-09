@@ -30,12 +30,18 @@ const themes = [
     value: 'winter'
   }
 ]
+
+const router = useRouter();
+function goBack() {
+  router.back();
+}
 </script>
 
 <template>
   <div class="navbar bg-base-100 shadow-lg">
-    <div class="flex-1">
+    <div class="inline-flex items-center gap-2 flex-1">
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">SFCS</NuxtLink>
+      <button @click="goBack" role="link" class="btn tooltip tooltip-bottom normal-case" data-tip="Retourner en arrière"><Icon name="ph:arrow-counter-clockwise-bold" size="1.2rem"/></button>
     </div>
     <div class="flex-none gap-2 hidden lg:flex">
 <!--      <div class="form-control">
