@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onClickOutside, useFocus} from "@vueuse/core";
-import { TutorialItem, CodexItem, AstuceItem } from "~/utils/interfaces";
+import {AstuceItem, CodexItem, TutorialItem} from "~/utils/interfaces";
 import {useFuse, UseFuseOptions} from "@vueuse/integrations/useFuse";
 
 const { data:tutoriels } = await useAsyncData('tutoriels', () => queryContent('tutoriels').find())
@@ -16,6 +16,7 @@ const modal = ref<HTMLElement | null>(null)
 const searchBar = ref<HTMLElement | null>(null)
 const search = ref<string>('')
 const searchValue = ref<HTMLInputElement | null>(null)
+const body = ref<HTMLBodyElement | null>(null)
 
 const optionsTutorial = computed<UseFuseOptions<TutorialItem>>(() => ({
   fuseOptions: {
@@ -71,14 +72,17 @@ if (showSearch) {
 }
 
 onMounted(() => {
-  const body = document.querySelector('body')
-  if (showSearch.value === true) {
-    body?.classList.add('overflow-hidden')
-  } else {
-    body?.classList.remove('overflow-hidden')
-  }
+  body.value = document.querySelector('body')
 })
 
+watch(showSearch, (newShowSearch) => {
+  if (newShowSearch) {
+    body.value?.classList.add('overflow-hidden')
+  } else {
+    body.value?.classList.remove('overflow-hidden')
+    search.value = ''
+  }
+})
 </script>
 
 <template>
@@ -93,7 +97,10 @@ onMounted(() => {
         </div>
         <div class="flex flex-col gap-10">
           <div>
-            <h5 class="font-semibold text-2xl mb-2">Tutoriels</h5>
+            <div class="inline-flex items-baseline gap-2">
+              <h5 class="font-semibold text-2xl mb-2">Tutoriels</h5>
+              <NuxtLink @click="hideModal" to="/tutoriels">Tout voir</NuxtLink>
+            </div>
             <ul class="flex gap-10 overflow-x-auto">
               <li v-if="tutorielsResults.length >= 1" v-for="result in tutorielsResults" class="card shrink-0 w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
@@ -118,7 +125,10 @@ onMounted(() => {
             </ul>
           </div>
           <div>
-            <h5 class="font-semibold text-2xl mb-2">Astuces</h5>
+            <div class="inline-flex items-baseline gap-2">
+              <h5 class="font-semibold text-2xl mb-2">Astuces</h5>
+              <NuxtLink @click="hideModal" to="/astuces">Tout voir</NuxtLink>
+            </div>
             <ul class="flex gap-10 overflow-x-auto">
               <li v-if="astucesResults.length >= 1" v-for="result in astucesResults" class="card shrink-0 w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
@@ -143,7 +153,10 @@ onMounted(() => {
             </ul>
           </div>
           <div>
-            <h5 class="font-semibold text-2xl mb-2">Codex</h5>
+            <div class="inline-flex items-baseline gap-2">
+              <h5 class="font-semibold text-2xl mb-2">Codex</h5>
+              <NuxtLink @click="hideModal" to="/codex">Tout voir</NuxtLink>
+            </div>
             <ul class="flex gap-10 overflow-x-auto">
               <li v-if="codexResults.length >= 1" v-for="result in codexResults" class="card shrink-0 w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
