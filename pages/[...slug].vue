@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
   <main class="classic-main flex gap-10">
-    <div class="prose prose-pre:overflow-x-scroll max-w-none md:w-4/5">
+    <div class="prose max-w-none md:w-4/5">
       <ContentDoc>
         <template #not-found>
           <main class="classic-main flex flex-col items-center">
@@ -65,7 +65,7 @@ onMounted(() => {
         </div>
       </div>
       <Teleport to="body">
-        <div v-if="showGoToTop" @click="y = 0" class="fixed bottom-10 right-10 md:right-20 z-50">
+        <div v-if="showGoToTop" @click="y = 0" class="fixed bottom-10 right-10 md:right-20 z-50 tooltip tooltip-top" data-tip="Retourner en haut">
           <div class="btn">
             <Icon name="ph:arrow-up" size="2rem" class="cursor-pointer" />
           </div>
