@@ -6,6 +6,9 @@ import {useFuse, UseFuseOptions} from "@vueuse/integrations/useFuse";
 const { data:tutoriels } = await useAsyncData('tutoriels', () => queryContent('tutoriels').find())
 const { data:astuces } = await useAsyncData('astuces', () => queryContent('astuces').find())
 const { data:codex } = await useAsyncData('codex', () => queryContent('codex').find())
+const { data:all } = await useAsyncData('content', () => queryContent('').find())
+
+const numberOfArticles = computed(() => 'Rechercher parmis ' + all.value?.length + ' articles...')
 
 const tutorielsFetched = ref<TutorialItem[]>(tutoriels)
 const astucesFetched = ref<AstuceItem[]>(astuces)
@@ -91,13 +94,13 @@ watch(showSearch, (newShowSearch) => {
 
 <template>
   <div class="form-control">
-    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Rechercher..." class="search-value input input-bordered"/>
+    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" :placeholder="numberOfArticles" class="search-value input input-bordered"/>
   </div>
   <Teleport to="body">
     <div v-if="showSearch" class="flex items-center justify-center fixed inset-0 overflow-y-scroll bg-neutral/70 backdrop-blur z-40">
       <div ref="modal" class="flex flex-col w-2/3 my-20 z-50">
         <div class="block form-control mb-12">
-          <input v-model="search" ref="searchBar" type="text" placeholder="Rechercher..." class="input input-bordered w-1/2"/>
+          <input v-model="search" ref="searchBar" type="text" :placeholder="numberOfArticles" class="input input-bordered w-1/2"/>
         </div>
         <div class="flex flex-col gap-10">
           <div>
