@@ -2,7 +2,7 @@
 title: 'make:controller - SF Cheatsheet'
 description: 'Créé un controller Symfony, le cerveau reliant votre base de donnée à votre template'
 displayName: 'make:controller'
-tags: ["controller", "mvc", "make"]
+tags: ["controller", "mvc", "make", "page", "contenu", "logic"]
 ---
 
 # symfony console make:controller

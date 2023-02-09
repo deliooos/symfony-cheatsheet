@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onClickOutside, useFocus} from "@vueuse/core";
+import {onClickOutside, useFocus, onKeyStroke} from "@vueuse/core";
 import {AstuceItem, CodexItem, TutorialItem} from "~/utils/interfaces";
 import {useFuse, UseFuseOptions} from "@vueuse/integrations/useFuse";
 
@@ -64,6 +64,10 @@ function showModalIfNotEmpty() {
 }
 
 onClickOutside(modal, () => {
+  hideModal()
+})
+
+onKeyStroke('Escape', () => {
   hideModal()
 })
 

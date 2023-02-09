@@ -2,7 +2,7 @@
 title: 'Créer et utiliser un Controller - SF Cheatsheet'
 description: "Créer un Controller automatiquement grâce au Maker Bundle de Symfony et l'utiliser"
 displayName: 'Créer et utiliser un Controller'
-tags: ["controller", "mvc", "make"]
+tags: ["controller", "mvc", "make", "page", "contenu", "logic"]
 ---
 
 # Créer et utiliser un Controller Symfony
