@@ -7,6 +7,9 @@ export default defineNuxtConfig({
         'nuxt-icon',
         '@nuxt/image-edge'
     ],
+    plugins: [
+        { src: '~/plugins/vercel.ts', mode: 'client' },
+    ],
     content: {
         highlight: {
             theme: 'github-dark'
