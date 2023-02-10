@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onClickOutside, useFocus, onKeyStroke} from "@vueuse/core";
+import {onClickOutside, useFocus, onKeyStroke, useMagicKeys } from "@vueuse/core";
 import {AstuceItem, CodexItem, TutorialItem} from "~/utils/interfaces";
 import {useFuse, UseFuseOptions} from "@vueuse/integrations/useFuse";
 
@@ -71,12 +71,27 @@ onKeyStroke('Escape', () => {
   hideModal()
 })
 
+const keys = useMagicKeys()
+const ctrlK = keys['Control+K']
+
+watch(ctrlK, (v) => {
+  if (v) {
+    showModal()
+  }
+})
+
 if (showSearch) {
   useFocus(searchBar, { initialValue: true })
 }
 
 onMounted(() => {
   body.value = document.querySelector('body')
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'k' && e.ctrlKey) {
+      e.preventDefault()
+    }
+  })
 })
 
 watch(showSearch, (newShowSearch) => {
@@ -91,7 +106,7 @@ watch(showSearch, (newShowSearch) => {
 
 <template>
   <div class="form-control">
-    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Rechercher..." class="search-value input input-bordered"/>
+    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Rechercher... CTRL+K" class="search-value input input-bordered"/>
   </div>
   <Teleport to="body">
     <div v-if="showSearch" class="fixed inset-0 bg-neutral/70 backdrop-blur z-40">
