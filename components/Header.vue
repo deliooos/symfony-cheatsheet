@@ -47,6 +47,18 @@ function goBack() {
 <!--      <div class="form-control">
         <input type="text" placeholder="Recherche à venir..." class="input input-bordered" disabled/>
       </div>-->
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn m-1"><Icon name="ph:list-dashes-bold" size="1.4rem"/></label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow-lg bg-base-100 rounded-box w-52">
+          <li>
+            <NuxtLink to="/apprendre-symfony">Apprendre Symfony</NuxtLink>
+            <NuxtLink to="/tutoriels">Tutoriels</NuxtLink>
+            <NuxtLink to="/astuces">Astuces</NuxtLink>
+            <NuxtLink to="/codex">Codex</NuxtLink>
+            <NuxtLink to="/builder">Builder<span class="badge badge-sm">Bêta</span></NuxtLink>
+          </li>
+        </ul>
+      </div>
       <Search />
       <div class="dropdown dropdown-end hidden lg:flex">
         <select v-model="colorMode.preference" class="select select-accent w-full max-w-xs">
