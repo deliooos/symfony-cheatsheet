@@ -106,7 +106,14 @@ watch(showSearch, (newShowSearch) => {
 
 <template>
   <div class="form-control">
-    <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" placeholder="Rechercher... CTRL+K" class="search-value input input-bordered"/>
+    <label for="search" class="relative">
+      <span class="absolute right-2 top-[45%] -translate-y-1/2">
+        <kbd class="kbd kbd-xs">CTRL</kbd>
+        +
+        <kbd class="kbd kbd-xs">K</kbd>
+      </span>
+      <input @input="showModalIfNotEmpty" v-model="search" ref="searchValue" type="text" name="search" placeholder="Rechercher..." class="search-value input input-bordered w-full"/>
+    </label>
   </div>
   <Teleport to="body">
     <div v-if="showSearch" class="fixed inset-0 bg-neutral/70 backdrop-blur z-40">

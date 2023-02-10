@@ -1,13 +1,14 @@
 <script setup lang="ts">
 // @ts-ignore
 import readingTime from "reading-time/lib/reading-time";
-import { useScroll } from "@vueuse/core";
+import {useScroll } from "@vueuse/core";
 
 const route = useRoute()
 const article = await queryContent(route.path).findOne()
 
 let readTime = ref('')
 let headers = ref<Array<HTMLHeadingElement>>([])
+
 const windowElement = ref()
 const { y } = useScroll(windowElement, { behavior : 'smooth'})
 const showGoToTop = ref(false)
