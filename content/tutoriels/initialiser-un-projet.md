@@ -18,7 +18,13 @@ Il est nécessaire d'avoir le [binaire de symfony](https://symfony.com/download)
 ::
 
 ## Puis-je initialiser une app Symfony ?
-Il est bon de se demander s'il est possible de créer une application Symfony sur sa machine. Avez-vous toutes les bonnes dépendances, les bonnes extensions php activées ? Toutes ces questions trouveront leur réponse après que vous ayez exécuté la commande `symfony check:requirements`. Si tout est bon vous verrez un message vert disant quelque chose du genre :
+Il est bon de se demander s'il est possible de créer une application Symfony sur sa machine. Avez-vous toutes les bonnes dépendances, les bonnes extensions php activées ? Toutes ces questions trouveront leur réponse après que vous ayez exécuté la commande suivante :
+
+```shell
+symfony check:requirements
+```
+
+Si tout est bon vous verrez un message vert disant quelque chose du genre :
 ```shell
 [OK]
 Your system is ready to run Symfony projects
